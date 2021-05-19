@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Container Test renders a container to the screen 1`] = `
+<ul
+  aria-label="character"
+>
+  <li>
+    <h1>
+      Detail Page
+    </h1>
+    <img />
+    <p />
+    <p />
+    <p />
+  </li>
+</ul>
+`;
