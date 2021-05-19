@@ -11,11 +11,12 @@ function AvatarContainer() {
         .then(setCharacters)
         .finally(() => setLoading(false));
     }, []);
-
+    if(loading) {
+        return <h1>Loading...</h1>
+    }
     return (
         <>
-            
-            {loading === true && <h1>Loading...</h1>}{loading === false && <CharacterList characters={characters} />}
+            <CharacterList characters={characters} />
         </>
     )
 }
