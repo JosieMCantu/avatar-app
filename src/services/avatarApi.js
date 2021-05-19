@@ -1,11 +1,13 @@
-import { json } from "msw/lib/types/context"
+export const fetchCharacters = async () => {
+    const res = await fetch('https://last-airbender-api.herokuapp.com/api/v1/characters')
+    const json = await res.json();
 
-export const fecthCharacter = async () => {
-    const res = await ('https://last-airbender-api.herokuapp.com/api/v1/characters')
-    const json = await res.json;
-    return {
-        name,
-        affiliation,
-        image: json.image,
-};
+    return json.map((item) => ({
+        id: item._id,
+        name: item.name,
+        affiliation: item.affiliation,
+        image: item.photoUrl,
+    }))
 }
+
+//get sinlge

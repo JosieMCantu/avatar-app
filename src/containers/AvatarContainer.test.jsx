@@ -8,5 +8,8 @@ import AvatarContainer from '../containers/AvatarContainer';
 describe('Avatar Container Test', () => {
     it('renders a container to the screen', () => {
         render(<AvatarContainer />)
+        screen.getByText('Loading...')
+
+        
     })
 })
